@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardItem, Text, Header, Body, Title } from 'native-base';
-import { Col, Row, Grid } from "react-native-easy-grid"
-import { View, StyleSheet, ScrollView, Image, FlatList, Dimensions } from 'react-native'
+import { Card, CardItem, Text, Header, Body, Title, Spinner, Button } from 'native-base';
+import { View, StyleSheet, ScrollView, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native';
 import axios from '../axios';
 
 const numColumns = 2;
@@ -11,7 +10,6 @@ export default class Categories extends Component {
         categories: undefined
     }
     async componentDidMount() {
-        console.log(Dimensions.get('window').width)
         const res = await axios.get(`categorias.php?site=public&action=readCategoria`)
         if (res.data) {
             const respuesta = res.data.dataset;
@@ -21,12 +19,20 @@ export default class Categories extends Component {
         }
     }
 
+    goAllCategories = (idCat, title) => {
+        this.props.navigation.navigate('AllCategories', {idCat, title});
+    }
+
+    keyExtractor = (item, index) => {
+        return (this.state.categories[index].idCategoria)
+    }
+
     renderItem = ({ item, index }) => {
         return (
             <Card style={styles.item}>
                 <CardItem cardBody style={styles.itemCard}>
                     <Image style={styles.itemTextContainer} source={{ uri: `http://192.168.1.7/libreria-maquilishuat/resources/img/categories/${item.img}` }} style={{ height: 200, width: 200, flex: 1 }} />
-                    <Text style={styles.itemText}>{item.nombreCat}</Text>
+                    <Button onPress={() => this.goAllCategories(item.idCategoria,item.nombreCat)} style={styles.itemText}><Text> {item.nombreCat} </Text></Button>
                 </CardItem>
             </Card>
         );
@@ -37,18 +43,21 @@ export default class Categories extends Component {
             <ScrollView>
                 <Header hasTabs>
                     <Body>
-                        <Title>Libreria Maquilishuat - Categorias</Title>
+                        <Title>Libreria Maquilishuat - Categoria</Title>
                     </Body>
                 </Header>
                 {
                     this.state.categories != undefined
-                    &&
-                    <FlatList
-                        data={this.state.categories}
-                        style={styles.container}
-                        renderItem={this.renderItem}
-                        numColumns={numColumns}
-                    />
+                        ?
+                        <FlatList
+                            data={this.state.categories}
+                            style={styles.container}
+                            keyExtractor={this.keyExtractor}
+                            renderItem={this.renderItem}
+                            numColumns={numColumns}
+                        />
+                        :
+                        <Spinner color='blue' />
                 }
             </ScrollView>
         );
@@ -90,10 +99,9 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '85%',
         marginLeft: '7.5%',
+        marginTop: (Dimensions.get('window').width * 0.19),
         textAlign: 'center',
         justifyContent: 'center',
-        paddingTop: 10,
-        paddingBottom: 10,
         textTransform: 'uppercase',
         fontWeight: 'bold',
         borderRadius: 7,

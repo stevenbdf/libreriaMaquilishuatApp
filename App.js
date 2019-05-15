@@ -1,7 +1,11 @@
 import React from 'react'
-import CategoriesScreen from './src/views/categories'
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import CategoriesScreen from './src/views/categories'
 import TabsComponent from './src/views/tabs';
+import AllCategoriesScreen from './src/views/allCategories'
+import {YellowBox} from 'react-native';
+
+YellowBox.ignoreWarnings(['Warning: componentWill', 'Remote debugger']);
 
 class HomeScreen extends React.Component {
   render() {
@@ -13,7 +17,8 @@ class HomeScreen extends React.Component {
 
 const AppNavigator = createStackNavigator({
   Home: HomeScreen,
-  Categories: CategoriesScreen 
+  Categories: CategoriesScreen,
+  AllCategories: AllCategoriesScreen
 }, { headerMode: 'none', initialRouteName: 'Home'});
 
 export default createAppContainer(AppNavigator);
