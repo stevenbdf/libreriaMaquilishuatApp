@@ -2,7 +2,7 @@ import React from 'react'
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import CategoriesScreen from './src/views/categories/categories'
 import TabsComponent from './src/views/tabs/tabs';
-import AllCategoriesScreen from './src/views/main/allCategories'
+import AllCategoriesScreen from './src/views/allCategories/allCategories'
 import {YellowBox} from 'react-native';
 
 YellowBox.ignoreWarnings(['Warning: componentWill', 'Remote debugger']);

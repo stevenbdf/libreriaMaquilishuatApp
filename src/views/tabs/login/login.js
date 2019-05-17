@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import {
-    Text, Item, Input, Label, Button, Icon, View
-} from 'native-base';
-import RNFetchBlob from 'react-native-fetch-blob';
-import axios from '../../../utils/axios/axios';
+import { Text, Item, Input, Label, Button, Icon, View } from 'native-base';
+import model from './loginModel'
 
 
 export default class Login extends Component {
@@ -15,38 +12,15 @@ export default class Login extends Component {
         };
     }
 
-    printState = () => {
-        RNFetchBlob.fetch('POST', 'http://192.168.1.7/libreria-maquilishuat/core/api/clientes.php?site=public&action=login', {
-            Authorization: "Bearer access-token",
-        }, [
-                { name: 'correo', data: this.state.email },
-                { name: 'contrasena', data: this.state.password }
-            ]
-        )
-            .then((resp) => {
-                console.log(resp.data)
-                const respuestaTraducida = JSON.parse(resp.data);
-                if (respuestaTraducida.status == 1) {
-                    console.log(respuestaTraducida.data);
-                    this.props.navigation.navigate('Categories');
-                } else {
-                    alert(respuestaTraducida.exception);
-                }
-            }).catch((err) => {
-                console.log(err);
-            })
+    login = () => {
+        model.sendLoginData(this.state.email, this.state.password, this)
     }
 
     logout = async () => {
-        const res = await axios.get(`clientes.php?site=public&action=logoutApp`)
-        if (res.data.status) {
-            alert('Has cerrado sesion')
-        } else {
-            alert('Error al cerrar sesion')
-        }
+        model.logout()
     }
 
-    render() { 
+    render() {
         return (
             <View style={{ width: '100%' }}>
                 <Item floatingLabel>
@@ -64,7 +38,7 @@ export default class Login extends Component {
                     />
                 </Item>
                 <Button primary
-                    onPress={() => this.printState()}
+                    onPress={() => this.login()}
                     style={{ marginTop: 20, marginLeft: 'auto', marginRight: 'auto' }}>
                     <Text> Ingresar </Text>
                     <Icon type="FontAwesome" name='send' />

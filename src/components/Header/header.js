@@ -4,9 +4,9 @@ import { Header, Body, Title } from 'native-base'
 export default HeaderComponent = (props) => {
     return (
         <Header>
+            {props.children}
             <Body>
                 <Title>{props.title}</Title>
-                {props.children}
             </Body>
         </Header>
     )

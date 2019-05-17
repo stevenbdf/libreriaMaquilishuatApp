@@ -1,7 +1,5 @@
 import axios from '../../utils/axios/axios'
 
-const saludar = () => {console.log('Hola steven')}
-
 const logout = async () => {
     const res = await axios.get(`clientes.php?site=public&action=logoutApp`)
     if (res.data.status) {
@@ -11,7 +9,17 @@ const logout = async () => {
     }
 }
 
+const loadCategories = async (context) => {
+    const res = await axios.get(`categorias.php?site=public&action=readCategoria`)
+    if (res.data) {
+        const respuesta = res.data.dataset;
+        context.setState({
+            categories: respuesta
+        })
+    }
+}
+
 export default {
-    saludar,
+    loadCategories,
     logout
 }
