@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Image, ScrollView } from 'react-native'
-import { Item,Text, Input, Label, Button, Icon, Content} from 'native-base'
+import { Item,Text, Input, Label, Button, Icon } from 'native-base'
 import ImagePicker from 'react-native-image-picker'
 import RNFetchBlob from 'react-native-fetch-blob'
 

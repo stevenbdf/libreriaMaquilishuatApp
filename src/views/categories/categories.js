@@ -26,8 +26,12 @@ export default class Categories extends Component {
         return (
             <Card style={stylesContainer.styles.item}>
                 <CardItem cardBody style={stylesContainer.styles.itemCard}>
-                    <Image style={stylesContainer.styles.itemTextContainer} source={{ uri: `http://192.168.1.7/libreria-maquilishuat/resources/img/categories/${item.img}` }} style={{ height: 200, width: 200, flex: 1 }} />
-                    <Button onPress={() => this.goAllCategories(item.idCategoria,item.nombreCat)} style={stylesContainer.styles.itemText}><Text> {item.nombreCat} </Text></Button>
+                    <Image style={stylesContainer.styles.itemTextContainer} 
+                           source={{ uri: `http://192.168.1.7/libreria-maquilishuat/resources/img/categories/${item.img}`}}
+                           style={stylesContainer.styles.cardImage} />
+                    <Button onPress={() => this.goAllCategories(item.idCategoria,item.nombreCat)} style={stylesContainer.styles.itemText}>
+                        <Text>{item.nombreCat}</Text>
+                    </Button>
                 </CardItem>
             </Card>
         );

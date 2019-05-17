@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     },
     item: {
         flex: 1,
-        height: (Dimensions.get('window').width / 2), // approximate a square
+        height: (Dimensions.get('window').width / 2),
         position: 'relative',
         margin: 7,
         borderRadius: 7,
@@ -43,6 +43,11 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         overflow: 'hidden',
     },
+    cardImage: {
+        height: 200,
+        width: 200,
+        flex: 1 
+    }
 });
 
 export default {
