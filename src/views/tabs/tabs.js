@@ -10,7 +10,7 @@ export default class TabsComponent extends Component {
         render: false
     }
     async componentDidMount() {
-        model.checkSession(this)
+        await model.checkSession(this)
     }
     render() {
         return (

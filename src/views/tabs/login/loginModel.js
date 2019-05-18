@@ -4,7 +4,11 @@ const sendLoginData = async (email, password, context) => {
     data = [{ name: 'correo', data: String(email) }, { name: 'contrasena', data: String(password) }]
     const resp = await fetchBlob.postData('clientes.php?site=public&action=login', data);
     if (resp.status) {
-        context.props.navigation.navigate('Categories');
+        context.props.navigation.navigate('Main');
+        context.setState({
+            email: '',
+            password: ''
+        })
     } else {
         alert(resp.exception)
     }

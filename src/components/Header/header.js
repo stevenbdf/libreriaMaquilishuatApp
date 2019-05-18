@@ -3,7 +3,7 @@ import { Header, Body, Title } from 'native-base'
 
 export default HeaderComponent = (props) => {
     return (
-        <Header>
+        <Header noShadow>
             {props.children}
             <Body>
                 <Title>{props.title}</Title>

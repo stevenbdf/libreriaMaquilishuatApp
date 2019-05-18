@@ -22,7 +22,7 @@ export default class Login extends Component {
 
     render() {
         return (
-            <View style={{ width: '100%' }}>
+            <View style={{ width: '100%'}}>
                 <Item floatingLabel>
                     <Label>Correo electronico</Label>
                     <Input keyboardType="email-address"
@@ -42,12 +42,6 @@ export default class Login extends Component {
                     style={{ marginTop: 20, marginLeft: 'auto', marginRight: 'auto' }}>
                     <Text> Ingresar </Text>
                     <Icon type="FontAwesome" name='send' />
-                </Button>
-                <Button primary
-                    onPress={() => this.logout()}
-                    style={{ marginTop: 20, marginLeft: 'auto', marginRight: 'auto' }}>
-                    <Text>Logout</Text>
-                    <Icon type="FontAwesome" name='times' />
                 </Button>
             </View>
         );

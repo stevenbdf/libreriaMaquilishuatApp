@@ -1,9 +1,10 @@
 import React from 'react'
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-import CategoriesScreen from './src/views/categories/categories'
-import TabsComponent from './src/views/tabs/tabs';
-import AllCategoriesScreen from './src/views/allCategories/allCategories'
-import {YellowBox} from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation'
+import TabsComponent from './src/views/tabs/tabs'
+import MainScreen from './src/views/main/main'
+import AllCategoriesScreen from './src/views/main/categories/allCategories/allCategories'
+import Product from './src/views/main/categories/allCategories/product/product'
+import { YellowBox } from 'react-native'
 
 YellowBox.ignoreWarnings(['Warning: componentWill', 'Remote debugger']);
 
@@ -17,8 +18,9 @@ class HomeScreen extends React.Component {
 
 const AppNavigator = createStackNavigator({
   Home: HomeScreen,
-  Categories: CategoriesScreen,
-  AllCategories: AllCategoriesScreen
-}, { headerMode: 'none', initialRouteName: 'Home'});
+  Main: MainScreen,
+  AllCategories: AllCategoriesScreen,
+  Product: Product
+}, { headerMode: 'none', initialRouteName: 'Product'});
 
 export default createAppContainer(AppNavigator);
