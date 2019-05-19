@@ -5,23 +5,26 @@ const styles = StyleSheet.create({
         fontSize: 14
     },
     viewContainer: {
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 75
+    },
+    green: {
+        color: '#2dce89'
     },
     reactionsContainer: {
-        width: (Dimensions.get('window').width * 0.85),
+        width: (Dimensions.get('window').width * 0.90),
         marginTop: 10,
         flexDirection: 'row',
         justifyContent: 'space-around',
     },
     title: {
-        fontSize: 24,
+        fontSize: 30,
         textTransform: 'uppercase',
         marginVertical: 15,
-        textAlign: 'center',
-        fontWeight: 'bold'
+        fontFamily: 'Staatliches'
     },
     bookImage: {
-        width: (Dimensions.get('window').width * 0.75),
+        width: (Dimensions.get('window').width * 0.80),
         height: (Dimensions.get('window').width),
     },
     icon: {
@@ -32,16 +35,35 @@ const styles = StyleSheet.create({
         fontSize: 35,
     },
     reactionText: {
-        marginVertical: 7
+        marginVertical: 7,
+        fontFamily: 'Staatliches',
+        fontSize: 20
     },
     progressBar: {
         marginTop: 5,
-        width: (Dimensions.get('window').width * 0.80)
+        width: (Dimensions.get('window').width * 0.85)
     },
     flexRow: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        width: (Dimensions.get('window').width * 0.85)
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: (Dimensions.get('window').width * 0.90),
+        marginTop: 15
+    },
+    flexColumn: {
+        flexDirection: 'column',
+        width: (Dimensions.get('window').width * 0.90),
+        marginTop: 15
+    },
+    quantityInput: {
+        width: (Dimensions.get('window').width * 0.45),
+        marginVertical: 0
+    },
+    cartBtn: {
+        marginTop: 7,
+    },
+    col6 : {
+        width: (Dimensions.get('window').width * 0.45)
     }
 });
 

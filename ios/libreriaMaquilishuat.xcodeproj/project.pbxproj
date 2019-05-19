@@ -61,6 +61,7 @@
 		3E956E32AB4941DEA27D86A0 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F5E0010CCB493595543D5E /* Zocial.ttf */; };
 		5C7CFBD83B114014AD62752A /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CADF1C2E314F426CAA815F49 /* libRNGestureHandler.a */; };
 		9CC7451801B54FF99C41B905 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA5090792D94007A2142BB1 /* libRNGestureHandler-tvOS.a */; };
+		57323B7C2D7543E09AEEFB02 /* Staatliches.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83F1036C301D49FC88791366 /* Staatliches.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +394,7 @@
 		EF24C5942A9A440AAAB871D0 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		CADF1C2E314F426CAA815F49 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		5DA5090792D94007A2142BB1 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		83F1036C301D49FC88791366 /* Staatliches.ttf */ = {isa = PBXFileReference; name = "Staatliches.ttf"; path = "../assets/fonts/Staatliches.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -686,6 +688,7 @@
 				D6AD04A954D94850826235BC /* rubicon-icon-font.ttf */,
 				1AB836E073EE49BFB446448B /* SimpleLineIcons.ttf */,
 				F0F5E0010CCB493595543D5E /* Zocial.ttf */,
+				83F1036C301D49FC88791366 /* Staatliches.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1155,6 +1158,7 @@
 				9898E2EFC9B94A0A907D7B26 /* rubicon-icon-font.ttf in Resources */,
 				22BA8B52260C4A43BA98DFC1 /* SimpleLineIcons.ttf in Resources */,
 				3E956E32AB4941DEA27D86A0 /* Zocial.ttf in Resources */,
+				57323B7C2D7543E09AEEFB02 /* Staatliches.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
