@@ -1,6 +1,11 @@
 import fetchBlob from '../../../../../utils/fetchBlob/RNFetchBlob'
 import AsyncStorage from '@react-native-community/async-storage'
 import { ToastAndroid } from 'react-native'
+import React from 'react'
+import { Card, CardItem, Body, Text, Right, Left, Button, Icon } from 'native-base'
+import stylesContainer from './styles'
+
+const styles = stylesContainer.styles;
 
 const loadProduct = async (idProducto, context) => {
     console.log(idProducto)
@@ -29,7 +34,7 @@ const getDataClient = async (context) => {
 
 const loadReactions = async (idProducto, context) => {
     const idCliente = context.state.dataClient.idCliente
-    data = [{ name: 'idProducto', data: String(idProducto) }, { name: 'idCliente', data: idCliente}]
+    data = [{ name: 'idProducto', data: String(idProducto) }, { name: 'idCliente', data: idCliente }]
     const resp = await fetchBlob.postData('reaccionesApp.php?site=public&action=readReaccionesCliente', data);
     if (resp.status) {
         if (resp.data[0].tipo === '1') {
@@ -51,13 +56,42 @@ const loadReactions = async (idProducto, context) => {
     }
 }
 
+const loadComments = async (idProducto, context) => {
+    data = [{ name: 'idProducto', data: String(idProducto) }]
+    const resp = await fetchBlob.postData('comentarioLibro.php?site=public&action=readComentariosLibro', data);
+    if (resp.status) {
+        console.log(resp.data)
+        resp.data = await resp.data.map(item =>
+            <Card key={item.idComent}>
+                <CardItem >
+                    <Body>
+                        <Text style={[styles.commentText, styles.green]}>{item.comentario}</Text>
+                    </Body>
+                </CardItem>
+                <CardItem footer>
+                    <Body style={[styles.flexRowComment]}>
+                        <Text style={[styles.reactionText, styles.textSmall]}>{item.nombreCliente}</Text>
+                        <Text style={[styles.reactionText, styles.textSmall]}>{item.fecha}</Text>
+                        <Icon style={styles.commentIcon} type="FontAwesome" name='pencil'/>
+                        <Icon style={styles.commentIcon} type="FontAwesome" name='trash'/>
+                    </Body>
+                </CardItem>
+            </Card>
+
+        )
+        context.setState({
+            comments: resp.data
+        })
+    }
+}
+
 const handleLikeClick = async (context) => {
     const like = context.state.like
     const dislike = context.state.dislike
     const product = context.state.product
     const idCliente = context.state.dataClient.idCliente
     if (!like && !dislike) {
-        data = [{ name: 'idProducto', data: String(product.idLibro) }, { name: 'tipoReaccion', data: '1' }, { name: 'idCliente', data: String(idCliente)}]
+        data = [{ name: 'idProducto', data: String(product.idLibro) }, { name: 'tipoReaccion', data: '1' }, { name: 'idCliente', data: String(idCliente) }]
         const resp = await fetchBlob.postData('reaccionesApp.php?site=public&action=insert', data);
         console.log(resp)
         if (resp.status) {
@@ -81,7 +115,7 @@ const handleDislikeClick = async (context) => {
     const product = context.state.product
     const idCliente = context.state.dataClient.idCliente
     if (!like && !dislike) {
-        data = [{ name: 'idProducto', data: String(product.idLibro) }, { name: 'tipoReaccion', data: '0' }, { name: 'idCliente', data: String(idCliente)}]
+        data = [{ name: 'idProducto', data: String(product.idLibro) }, { name: 'tipoReaccion', data: '0' }, { name: 'idCliente', data: String(idCliente) }]
         const resp = await fetchBlob.postData('reaccionesApp.php?site=public&action=insert', data);
         if (resp.status) {
             await loadReactions(product.idLibro, context)
@@ -100,7 +134,7 @@ const handleDislikeClick = async (context) => {
 
 
 const updateReaction = async (nuevaReaccion, idProducto, context, idCliente) => {
-    data = [{ name: 'idProducto', data: String(idProducto) }, { name: 'nuevaReaccion', data: nuevaReaccion }, { name: 'idCliente', data: String(idCliente)}]
+    data = [{ name: 'idProducto', data: String(idProducto) }, { name: 'nuevaReaccion', data: nuevaReaccion }, { name: 'idCliente', data: String(idCliente) }]
     const resp = await fetchBlob.postData('reaccionesApp.php?site=public&action=updateReaccion', data);
     if (resp.status) {
         await loadReactions(idProducto, context)
@@ -111,7 +145,7 @@ const updateReaction = async (nuevaReaccion, idProducto, context, idCliente) => 
 }
 
 const deleteReaction = async (idProducto, context, idCliente) => {
-    data = [{ name: 'idProducto', data: String(idProducto) }, { name: 'idCliente', data: String(idCliente)}]
+    data = [{ name: 'idProducto', data: String(idProducto) }, { name: 'idCliente', data: String(idCliente) }]
     const resp = await fetchBlob.postData('reaccionesApp.php?site=public&action=delete', data);
     console.log(resp)
     if (resp.status) {
@@ -125,6 +159,7 @@ const deleteReaction = async (idProducto, context, idCliente) => {
 export default {
     loadProduct,
     loadReactions,
+    loadComments,
     getDataClient,
     handleLikeClick,
     handleDislikeClick

@@ -21,6 +21,6 @@ const AppNavigator = createStackNavigator({
   Main: MainScreen,
   AllCategories: AllCategoriesScreen,
   Product: Product
-}, { headerMode: 'none', initialRouteName: 'Home'});
+}, { headerMode: 'none', initialRouteName: 'Product'});
 
 export default createAppContainer(AppNavigator);

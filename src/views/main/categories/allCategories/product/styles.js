@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
         fontFamily: 'Staatliches',
         fontSize: 20
     },
+    commentText: {
+        marginVertical: 7,
+        fontFamily: 'Staatliches',
+        fontSize: 18
+    },
     progressBar: {
         marginTop: 5,
         width: (Dimensions.get('window').width * 0.85)
@@ -49,6 +54,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: (Dimensions.get('window').width * 0.90),
         marginTop: 15
+    },
+    flexRowComment: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: (Dimensions.get('window').width * 0.90),
+        marginTop: 0
     },
     flexColumn: {
         flexDirection: 'column',
@@ -64,6 +76,10 @@ const styles = StyleSheet.create({
     },
     col6 : {
         width: (Dimensions.get('window').width * 0.45)
+    },
+    commentIcon: {
+        fontSize: 18,
+        marginRight: 0
     }
 });
 
