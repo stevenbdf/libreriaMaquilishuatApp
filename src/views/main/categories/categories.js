@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardItem, Text, Spinner, Button } from 'native-base';
-import { ScrollView, Image, FlatList} from 'react-native';
+import { ScrollView, Image, FlatList, BackHandler} from 'react-native';
 import stylesContainer from './styles'
 import model from './categoriesModel'
 
@@ -11,6 +11,7 @@ export default class Categories extends Component {
 
     async componentDidMount() {
         model.loadCategories(this)
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
     }
 
     goAllCategories = (idCat, title) => {
@@ -21,12 +22,16 @@ export default class Categories extends Component {
         return (this.state.categories[index].idCategoria)
     }
 
+    handleBackButton() {
+        return true;
+    }
+
     renderItem = ({ item, index }) => {
         return (
             <Card style={stylesContainer.styles.item}>
                 <CardItem cardBody style={stylesContainer.styles.itemCard}>
                     <Image style={stylesContainer.styles.itemTextContainer} 
-                           source={{ uri: `http://192.168.1.7/libreria-maquilishuat/resources/img/categories/${item.img}`}}
+                           source={{ uri: `http://35.229.86.167/resources/img/categories/${item.img}`}}
                            style={stylesContainer.styles.cardImage} />
                     <Button onPress={() => this.goAllCategories(item.idCategoria,item.nombreCat)} style={stylesContainer.styles.itemText}>
                         <Text>{item.nombreCat}</Text>

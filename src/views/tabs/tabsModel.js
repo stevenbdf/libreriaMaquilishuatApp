@@ -1,8 +1,17 @@
-import axios from '../../utils/axios/axios'
+import AsyncStorage from '@react-native-community/async-storage'
+
+const getDataClient = async () => {
+    let dataClient = undefined;
+    try {
+      dataClient = await AsyncStorage.getItem('dataClient');
+    } catch (error) {
+      console.log(error.message);
+    }
+    return dataClient
+  }
 
 const checkSession = async (context) => {
-    const res = await axios.get(`clientes.php?site=public&action=checkSession`)
-    if (res.data.status) {
+    if (await getDataClient() != undefined) {
         context.props.navigation.navigate('Main');
     } else {
         console.log('NO estas logeado')

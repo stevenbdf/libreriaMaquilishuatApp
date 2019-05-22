@@ -16,10 +16,6 @@ export default class Login extends Component {
         model.sendLoginData(this.state.email, this.state.password, this)
     }
 
-    logout = async () => {
-        model.logout()
-    }
-
     render() {
         return (
             <View style={{ width: '100%'}}>

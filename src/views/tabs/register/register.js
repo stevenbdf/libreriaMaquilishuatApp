@@ -43,7 +43,7 @@ export default class Register extends Component {
 
 
     handleUploadPhoto = async () => {
-        RNFetchBlob.fetch('POST', 'http://192.168.1.7/libreria-maquilishuat/core/api/clientes.php?site=public&action=register', {
+        RNFetchBlob.fetch('POST', 'http://35.229.86.167/core/api/clientesApp.php?site=public&action=register', {
             Authorization: "Bearer access-token",
         }, [
                 { name: 'imagen', filename: this.state.fileName, data: this.state.data },

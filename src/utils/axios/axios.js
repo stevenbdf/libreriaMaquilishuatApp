@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://192.168.1.7/libreria-maquilishuat/core/api/',
+    baseURL: 'http://35.229.86.167/core/api/',
     withCredentials: true,
 });
 

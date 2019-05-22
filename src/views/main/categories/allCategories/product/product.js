@@ -12,10 +12,12 @@ export default class Product extends Component {
         product: undefined,
         like: false,
         dislike: false,
+        dataClient: undefined,
         quantity: '1'
     }
 
     async componentDidMount() {
+        await model.getDataClient(this)
         await model.loadReactions(this.props.navigation.getParam('idProducto', '1'), this)
         await model.loadProduct(this.props.navigation.getParam('idProducto', '1'), this)
     }
@@ -36,7 +38,7 @@ export default class Product extends Component {
                         <Text style={[styles.title, styles.green]}>
                             {this.state.product.NombreL}
                         </Text>
-                        <Image style={styles.bookImage} source={{ uri: `http://192.168.1.7/libreria-maquilishuat/resources/img/books/${this.state.product.img}` }} />
+                        <Image style={styles.bookImage} source={{ uri: `http://35.229.86.167/resources/img/books/${this.state.product.img}` }} />
                         <View style={styles.reactionsContainer}>
                             <Icon onPress={() => model.handleLikeClick(this)} type="FontAwesome" name='thumbs-up' style={[styles.reactionIcon, this.state.like && styles.green]} />
                             <Text style={styles.reactionText}>{this.state.product.likes}</Text>

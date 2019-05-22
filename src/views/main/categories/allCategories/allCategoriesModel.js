@@ -30,6 +30,7 @@ const limitText = (descripcion) => {
 }
 
 const printAprobacion = (aprob, stylesContainer) => {
+    aprob = parseFloat(aprob).toFixed(2)
     const colorT = aprob >= 70 ?
         <Text style={[stylesContainer.styles.green, stylesContainer.styles.textSmall]}>{aprob}% </Text>
         : aprob >= 50 && aprob <= 69 ?

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Body, Spinner, List, ListItem, Text, Left, Right, Button, Icon } from 'native-base';
-import { ScrollView, Image } from 'react-native';
+import { ScrollView, Image, BackHandler } from 'react-native';
 import Header from '../../../../components/Header/header'
 import stylesContainer from './styles'
 import model from './allCategoriesModel'
@@ -12,6 +12,12 @@ export default class AllCategories extends Component {
 
     async componentDidMount() {
         model.loadProducts(this.props.navigation.getParam('idCat', '2'), this)
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+    }
+
+    handleBackButton = () => {
+        this.props.navigation.goBack()
+        return false;
     }
 
     render() {
@@ -23,14 +29,14 @@ export default class AllCategories extends Component {
                         <Text style={stylesContainer.styles.textSmall}>Volver</Text>
                     </Button>
                 </Header>
-                {
-                    this.state.products
-                        ?
-                        this.state.products.map(item =>
-                            <List key={item.idLibro}>
-                                <ListItem thumbnail>
+                <List>
+                    {
+                        this.state.products
+                            ?
+                            this.state.products.map(item =>
+                                <ListItem thumbnail key={item.idLibro}>
                                     <Left>
-                                        <Image style={stylesContainer.styles.bookImage} source={{ uri: `http://192.168.1.7/libreria-maquilishuat/resources/img/books/${item.img}` }} />
+                                        <Image style={stylesContainer.styles.bookImage} source={{ uri: `http://35.229.86.167/resources/img/books/${item.img}` }} />
                                     </Left>
                                     <Body>
                                         <Text style={stylesContainer.styles.title}>{item.NombreL}</Text>
@@ -41,16 +47,16 @@ export default class AllCategories extends Component {
                                         <Text note numberOfLines={3}>{model.limitText(item.resena)}</Text>
                                     </Body>
                                     <Right>
-                                        <Button transparent>
+                                        <Button transparent onPress={() => this.props.navigation.navigate('Product', { idProducto: item.idLibro })}>
                                             <Text>Ver</Text>
                                         </Button>
                                     </Right>
                                 </ListItem>
-                            </List>
-                        )
-                        :
-                        <Spinner color='blue' />
-                }
+                            )
+                            :
+                            <Spinner color='blue' />
+                    }
+                </List>
             </ScrollView>
         );
     }

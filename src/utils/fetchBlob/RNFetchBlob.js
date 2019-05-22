@@ -20,7 +20,7 @@ const isJSONString = (string) => {
  * @param {array} data must contain { name: 'field': data: 'data'}
  */
 const postData = async (apiURL, data = null) => {
-    const resp = await RNFetchBlob.fetch('POST', `http://192.168.1.7/libreria-maquilishuat/core/api/${apiURL}`, {
+    const resp = await RNFetchBlob.fetch('POST', `http://35.229.86.167/core/api/${apiURL}`, {
         Authorization: "Bearer access-token",
     }, data)
         .catch((err) => {
@@ -34,9 +34,9 @@ const postData = async (apiURL, data = null) => {
             return ({ status: 0, exception: objectResponse.exception });
         }
     } else {
+        console.log(resp)
         return ({ status: 0, exception: 'Error al realizar peticion' });
     }
-
 }
 
 export default {

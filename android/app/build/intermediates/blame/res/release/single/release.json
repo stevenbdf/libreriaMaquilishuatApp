@@ -121,7 +121,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_redbox_item_title.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\layout\\redbox_item_title.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\layout\\redbox_item_title.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -277,11 +277,11 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_fps_view.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\layout\\fps_view.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\layout\\fps_view.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_catalyst_slide_up.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\anim\\catalyst_slide_up.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\anim\\catalyst_slide_up.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_screen_simple.xml.flat",
@@ -373,7 +373,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_catalyst_fade_out.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\anim\\catalyst_fade_out.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\anim\\catalyst_fade_out.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-v23_abc_control_background_material.xml.flat",
@@ -673,7 +673,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_redbox_top_border_background.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\drawable\\redbox_top_border_background.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\drawable\\redbox_top_border_background.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -693,7 +693,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_catalyst_push_up_in.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\anim\\catalyst_push_up_in.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\anim\\catalyst_push_up_in.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -753,7 +753,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_catalyst_fade_in.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\anim\\catalyst_fade_in.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\anim\\catalyst_fade_in.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -805,7 +805,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_dev_loading_view.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\layout\\dev_loading_view.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\layout\\dev_loading_view.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -1073,7 +1073,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\xml_rn_dev_preferences.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\xml\\rn_dev_preferences.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\xml\\rn_dev_preferences.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_list_menu_item_radio.xml.flat",
@@ -1253,11 +1253,11 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_catalyst_push_up_out.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\anim\\catalyst_push_up_out.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\anim\\catalyst_push_up_out.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_redbox_view.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\layout\\redbox_view.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\layout\\redbox_view.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_cab_background_top_material.xml.flat",
@@ -1405,7 +1405,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_catalyst_slide_down.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\anim\\catalyst_slide_down.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\anim\\catalyst_slide_down.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_hint_foreground_material_dark.xml.flat",
@@ -1601,7 +1601,7 @@
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_redbox_item_frame.xml.flat",
-        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.6.aar\\07415f89ec6c2f9c64f6d4a4e0108232\\res\\layout\\redbox_item_frame.xml"
+        "source": "C:\\Users\\steve\\.gradle\\caches\\transforms-1\\files-1.1\\react-native-0.59.8.aar\\32026ede8ff85d4405b9cd93157fb1bf\\res\\layout\\redbox_item_frame.xml"
     },
     {
         "merged": "C:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",

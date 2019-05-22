@@ -1,13 +1,18 @@
-import axios from '../../../utils/axios/axios'
+import AsyncStorage from '@react-native-community/async-storage';
+
+const deleteDataClient = async () => {
+    try {
+        await AsyncStorage.removeItem('dataClient');
+    } catch (error) {
+        // Error retrieving data
+        console.log(error.message);
+    }
+};
 
 const logout = async (context) => {
-    const res = await axios.get(`clientes.php?site=public&action=logoutApp`)
-    if (res.data.status) {
-        alert('Has cerrado sesion')
-        context.props.navigation.navigate('Home');
-    } else {
-        alert('Error al cerrar sesion')
-    }
+    alert('Has cerrado sesion')
+    await deleteDataClient()
+    context.props.navigation.navigate('Home');
 }
 
 export default {

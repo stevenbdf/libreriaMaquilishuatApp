@@ -7,10 +7,11 @@ import model from './tabsModel'
 
 export default class TabsComponent extends Component {
     state = {
-        render: false
+        render: true
     }
     async componentDidMount() {
         await model.checkSession(this)
+        console.log('enter')
     }
     render() {
         return (
