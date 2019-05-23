@@ -1,4 +1,4 @@
-#Tue May 21 14:16:37 CST 2019
+#Wed May 22 19:34:28 CST 2019
 base.0=C\:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

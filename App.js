@@ -4,6 +4,7 @@ import TabsComponent from './src/views/tabs/tabs'
 import MainScreen from './src/views/main/main'
 import AllCategoriesScreen from './src/views/main/categories/allCategories/allCategories'
 import Product from './src/views/main/categories/allCategories/product/product'
+import EditComment from './src/views/main/categories/allCategories/product/editComment/editComment'
 import { YellowBox } from 'react-native'
 
 YellowBox.ignoreWarnings(['Warning: componentWill', 'Remote debugger']);
@@ -20,7 +21,8 @@ const AppNavigator = createStackNavigator({
   Home: HomeScreen,
   Main: MainScreen,
   AllCategories: AllCategoriesScreen,
-  Product: Product
-}, { headerMode: 'none', initialRouteName: 'Home'});
+  Product: Product,
+  EditComment: EditComment
+}, { headerMode: 'none', initialRouteName: 'Product'});
 
 export default createAppContainer(AppNavigator);

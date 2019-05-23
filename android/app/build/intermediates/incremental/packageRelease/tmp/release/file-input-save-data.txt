@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun May 19 22:07:23 CST 2019
+#Wed May 22 00:04:47 CST 2019
 56.path=fonts/FontAwesome.ttf
 5.base=C\:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\release\\0
 42.base=C\:\\Users\\steve\\Desktop\\Desarrollo Web\\Proyectos\\libreria-maquilishuat-native\\libreriaMaquilishuat\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\release\\0

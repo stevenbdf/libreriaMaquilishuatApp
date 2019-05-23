@@ -78,9 +78,22 @@ const styles = StyleSheet.create({
         width: (Dimensions.get('window').width * 0.45)
     },
     commentIcon: {
-        fontSize: 18,
-        marginRight: 0
+        fontSize: 20,
+        padding: 10
+    },
+    flexRowCommentButtons: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: (Dimensions.get('window').width * 0.20),
+        marginTop: 0
+    },
+    sendCommentButton: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginVertical: 15
     }
+
 });
 
 export default {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, ScrollView, Image, ProgressBarAndroid } from 'react-native'
-import { Button, Icon, Spinner, Text, Item, Input, Label } from 'native-base'
+import { Button, Icon, Spinner, Text, Item, Input, Label, Textarea } from 'native-base'
 import HeaderComponent from '../../../../../components/Header/header'
 import stylesContainer from './styles'
 import model from './productModel'
@@ -10,12 +10,15 @@ const styles = stylesContainer.styles;
 export default class Product extends Component {
     state = {
         product: undefined,
+        commentsRaw: undefined,
         comments: undefined,
         like: false,
         dislike: false,
         dataClient: undefined,
+        MyComment: undefined,
         quantity: '1'
     }
+
 
     async componentDidMount() {
         const idProducto = this.props.navigation.getParam('idProducto', '1')
@@ -26,7 +29,6 @@ export default class Product extends Component {
     }
 
     render() {
-
         return (
             <View>
                 <HeaderComponent title={'Libreria Maquilishuat'}>
@@ -102,15 +104,26 @@ export default class Product extends Component {
                                 </View>
                                 <View style={styles.col6}>
                                     <Text style={[styles.reactionText, styles.green]}>País de Origen:</Text>
-                                    <Text style={styles.reactionText}>{this.state.product.pais} {this.state.product.apellidoAutor} </Text>
+                                    <Text style={styles.reactionText}>{this.state.product.pais}</Text>
                                 </View>
                             </View>
                             <View style={styles.flexColumn}>
                                 <Text style={[styles.title, styles.green]}>
                                     Comentarios
                                 </Text>
+                                <Text style={styles.textSmall}>Logeado como: {this.state.dataClient.correo}</Text>
                             </View>
                             <View style={styles.flexColumn}>
+                                <Textarea rowSpan={4} bordered placeholder="Escribe un comentario..."
+                                          onChangeText={(text) => this.setState({ MyComment: text })}
+                                          value={this.state.MyComment}
+                                />
+                                <View style={styles.sendCommentButton}>
+                                    <Button success onPress={() => model.addComment(this)}>
+                                        <Text>Enviar</Text>
+                                        <Icon type="FontAwesome" name='send' />
+                                    </Button>
+                                </View>
                                 {
                                     this.state.comments.map(item => item)
                                 }

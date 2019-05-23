@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Body, Title } from 'native-base'
+import { Header, Body, Title, Left } from 'native-base'
 
 export default HeaderComponent = (props) => {
     return (
