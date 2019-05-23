@@ -1,8 +1,8 @@
 import fetchBlob from '../../../../../utils/fetchBlob/RNFetchBlob'
 import AsyncStorage from '@react-native-community/async-storage'
-import { ToastAndroid } from 'react-native'
+import { ToastAndroid, Alert } from 'react-native'
 import React from 'react'
-import { Card, CardItem, Body, Text, View, Icon, Textarea } from 'native-base'
+import { Card, CardItem, Body, Text, View, Icon, Textarea, Toast } from 'native-base'
 import stylesContainer from './styles'
 
 const styles = stylesContainer.styles;
@@ -80,7 +80,7 @@ const loadComments = async (idProducto, context) => {
                                 &&
                                 <View style={styles.flexRowCommentButtons}>
                                     <Icon onPress={() => handleEditComment(item.idComent, context)} style={styles.commentIcon} type="FontAwesome" name='pencil' />
-                                    <Icon onPress={() => handleDeleteComment(item.idComent)} style={styles.commentIcon} type="FontAwesome" name='trash' />
+                                    <Icon onPress={() => handleDeleteComment(item.idComent, context)} style={styles.commentIcon} type="FontAwesome" name='trash' />
                                 </View>
                             }
                         </Body>
@@ -90,18 +90,49 @@ const loadComments = async (idProducto, context) => {
         context.setState({
             comments: resp.data
         })
+    } else {
+        context.setState({
+            comments: undefined
+        })
     }
 }
 
 const handleEditComment = async (idComentario, context) => {
     const idCliente = context.state.dataClient.idCliente
-    let comentario = context.state.commentsRaw.filter( item => parseInt(item.idComent) == parseInt(idComentario))
+    let comentario = context.state.commentsRaw.filter(item => parseInt(item.idComent) == parseInt(idComentario))
     comentario = comentario[0].comentario
-    context.props.navigation.navigate('EditComment', {idComentario, comentario, idCliente, context})
+    context.props.navigation.navigate('EditComment', { idComentario, comentario, idCliente, context })
 }
 
-const handleDeleteComment = async (idComment) => {
-    ToastAndroid.show(`Has eliminado el comentario ${idComment}`, ToastAndroid.SHORT)
+const handleDeleteComment = async (idComment, context) => {
+    Alert.alert(
+        'Atención',
+        '¿Quieres borrar tu comentario?',
+        [
+            {
+                text: 'No, cancelar',
+                onPress: () => ToastAndroid.show('Comentario NO borrado', ToastAndroid.SHORT)
+            },
+            {
+                text: 'Si, borrar',
+                onPress: async() => {
+                    const idCliente = context.state.dataClient.idCliente
+                    data = [{ name: 'idComentario', data: String(idComment) },
+                    { name: 'idCliente', data: String(idCliente) }]
+                    const resp = await fetchBlob.postData('comentarioLibroApp.php?site=public&action=delete', data);
+                    if (resp.status) {
+                        const idProduct = context.state.product.idLibro
+                        await loadReactions(idProduct, context)
+                        await loadComments(idProduct, context)
+                        await loadProduct(idProduct, context)
+                        ToastAndroid.show('Comentario borrado :D', ToastAndroid.SHORT)
+                    } else {
+                        alert('Error al borrar comentario')
+                    }
+                }
+            }
+        ]
+    )
 }
 
 const handleLikeClick = async (context) => {
@@ -184,8 +215,8 @@ const addComment = async (context) => {
         console.log(resp)
         if (resp.status) {
             await loadReactions(idProduct, context)
-            await loadProduct(idProduct, context)
             await loadComments(idProduct, context)
+            await loadProduct(idProduct, context)
             ToastAndroid.show('¡Comentario agregado!', ToastAndroid.SHORT);
         } else {
             alert('Error al crear comentario')

@@ -38,7 +38,7 @@ export default class Product extends Component {
                     </Button>
                 </HeaderComponent>
                 {
-                    this.state.product && this.state.comments ?
+                    this.state.product ?
                         <ScrollView contentContainerStyle={styles.viewContainer}>
                             <Text style={[styles.title, styles.green]}>
                                 {this.state.product.NombreL}
@@ -125,6 +125,8 @@ export default class Product extends Component {
                                     </Button>
                                 </View>
                                 {
+                                    this.state.comments
+                                    &&
                                     this.state.comments.map(item => item)
                                 }
                             </View>
